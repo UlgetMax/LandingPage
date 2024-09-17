@@ -2,16 +2,18 @@ body {
     font-size: 16px;
     font-weight: 400;
     font-family: "Montserrat", sans-serif;
+    color: #333333;
 }
 
 
 .wrapper {
     background-color: #FED100;
     display: flex;
-    min-height: 100%;
+    min-height: 650px;
     overflow: hidden;
     flex-direction: column;
     padding-top: 40px;
+    padding-bottom: 85px;
 }
 .header {
 }
@@ -53,6 +55,90 @@ body {
 }
 
 
+.banner {
+    position: relative;
+    margin-top: 64px;
+}
+
+.banner__row {
+    width: 547px;
+    position: relative;
+    /* display: flex;
+    flex-direction: column; */
+}
+.banner::before {
+    content: url('../img/man.png'); /* Укажите путь к вашему изображению */
+    position: absolute;
+    right: 0; 
+    top: 50%; 
+    transform: translateY(-50%); 
+}
+.banner__title {
+    font-size: 70px;
+    font-weight: 700;
+    margin-bottom: 50px;
+}
+.banner__title span {
+    font-size: 30px;
+    font-weight: 600;
+}
+/* .banner__subtitle {
+} */
+.banner__img {
+    display: none;
+}
+.banner__button {
+    position: relative;
+    margin-bottom: 74px;
+}
+.banner__btn {
+    position: relative;
+    width: 304px;
+    font-size: 24px;
+    font-weight: 600;
+    padding: 16px 95px;
+    background-color: #FF352B;
+    color: #fff;
+    z-index: 10;
+    transition: 0.3s ease-in;
+}
+.banner__shadow {
+    position: absolute;
+    z-index: 1;
+    width: 304px;
+    height: 60px;
+    border: #fff 2px solid;
+    top: 10px;
+    left: 10px;
+    bottom: 0;
+    transition: 0.3s ease-in;
+}
+.banner__btn:hover {
+    background-color: #FF772B;
+}
+.banner__btn:hover ~ .banner__shadow {
+    background-color: #fff;
+}
+
+.banner__description {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.description__block {
+    display: flex;
+    gap: 10px;
+}
+.description__img {
+}
+.description__title {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 21px;
+}
+
+
+
 @media (max-width: 1312px) {
     .container {
         max-width: 1000px;
@@ -69,11 +155,15 @@ body {
     .menu__link  {
         font-size: 14px;
     }
+    
 }
 
 @media (max-width: 992px) {
     .container {
         max-width: 750px;
+    }
+    .banner::before {
+        display: none;
     }
 }
 
@@ -117,6 +207,68 @@ body {
     .header__burger::after {
         bottom: 0;
     }
+
+    .banner {
+        margin-top: 48px;
+    }
+
+    .banner__button::before {
+        content: url('../img/man-big.png'); 
+        position: absolute;
+        display: block;
+        left: 0; 
+        bottom: 50%;
+    }
+
+    .banner__img {
+        display: block;
+        height: 510px;
+    }
+
+    .banner__row {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+    }
+    .banner__title {
+        text-align: center;
+        font-size: 56px;
+        margin: 0;
+    }
+    .banner__title span {
+        font-size: 36px;
+    }
+    .banner__btn {
+        font-size: 30px;
+    }
+    .banner__shadow {
+        top: 20px;
+        left: 10px;
+    }
+
+    .banner__description {
+        justify-content: space-around;
+    }
+}
+@media (max-width: 560px) {
+    .container {
+        max-width: none;
+    }
+    .banner__description {
+        display: none;
+    }
+    .banner__button {
+        margin: 0;
+    }
+
+    .banner__title {
+        font-size: 42px;
+    }
+    .banner__title span {
+        font-size: 26px;
+    }
 }
 
 @media (max-width: 319px) {
@@ -134,5 +286,28 @@ body {
     }
     .header__burger span {
         top: 8.5px;
+    } 
+
+
+    .banner__shadow {
+        display: none;
+    }
+    .banner__btn {
+        font-size: 20px;
+        width: 292px;
+    }
+    .banner__title {
+        font-size: 28px;
+    }
+    .banner__title span {
+        font-size: 18px;
+    }
+    .banner__button::before {
+        content: url('../img/man-little.png'); 
+        /* width: 248px;
+        height: auto; */
+    }
+    .banner__img {
+        height: 336px;
     }
 }
