@@ -138,6 +138,50 @@ body {
 }
 
 
+.process {
+    margin-top: 96px;
+    padding-bottom: 102px;
+}
+.process__wrapper {
+    max-width: 1105px;
+    margin: 0 auto;
+}
+.process__title {
+    font-size: 30px;
+    font-weight: 600;
+    text-align: center;
+}
+.process__row {
+    margin-top: 60px;
+    display: grid;
+    gap: 48px;
+    grid-template-columns: 1fr 1fr;
+}
+
+
+.process__block {
+    display: grid;
+    grid-template-columns: 35% 65%;
+    align-items: center;
+}
+.process__block__number {
+    font-size: 50px;
+    font-weight: 300;
+    text-shadow: 1px 1px 2px #FED100;
+}
+.process__block__text {
+}
+.process__block__title {
+    font-size: 20px;
+    font-weight: 500;
+}
+.process__block__subtitle {
+    margin-top: 16px;
+}
+.display-block {
+    display: block;
+}
+
 
 @media (max-width: 1312px) {
     .container {
@@ -251,6 +295,20 @@ body {
     .banner__description {
         justify-content: space-around;
     }
+
+
+    /* Process */
+
+    .process__row {
+        grid-template-columns: 1fr;
+    }
+
+    .process__block__number {
+        font-size: 90px;
+    }
+    .process__block__title {
+        font-size: 24px;
+    }
 }
 @media (max-width: 560px) {
     .container {
@@ -269,6 +327,19 @@ body {
     .banner__title span {
         font-size: 26px;
     }
+
+
+
+    /* Process */
+
+
+    .process__block__number {
+        font-size: 40px;
+    }
+    .process__block__title {
+        font-size: 20px;
+    }
+
 }
 
 @media (max-width: 319px) {
@@ -309,5 +380,32 @@ body {
     }
     .banner__img {
         height: 336px;
+    }
+
+
+    /* Process */
+
+
+    .process__block__number {
+        font-size: 50px;
+    }
+    .process__block__title {
+        font-size: 16px;
+    }
+
+    .process__block {
+        position: relative;
+        grid-template-columns: 61px 1fr;
+        gap: 8px;
+    }
+    .display-block {
+        display: none;
+    }
+
+    .process__block::before {
+        content: url("../img/svg/hide-list.svg");
+        position: absolute;
+        right: -4px;
+        top: 0;
     }
 }
