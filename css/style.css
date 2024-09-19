@@ -140,7 +140,6 @@ body {
 
 .process {
     margin-top: 96px;
-    padding-bottom: 102px;
 }
 .process__wrapper {
     max-width: 1105px;
@@ -183,9 +182,95 @@ body {
 }
 
 
+/* Price */
+
+
+
+.price {
+    margin-top: 102px;
+    padding-bottom: 102px;
+}
+
+.price__wrapper {
+}
+.price__title {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 600;
+}
+.price__subtitle {
+    margin-top: 16px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 24px;
+}
+.price__row {
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-between;
+}
+.price__apartment {
+    width: 421px;
+    height: 579px;
+    padding: 84px 80px 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    border: #EBEBEB 1px solid;
+}
+.apartment-active {
+    border: #FED100 1px solid;
+}
+.apartment__title {
+    font-size: 24px;
+    font-weight: 600;
+    /* margin-bottom: 60px; */
+}
+
+.apartment__enum {
+    text-align: center;
+}
+.apartment__van,
+.apartment__movers { 
+    margin-bottom: 26px;
+}
+.apartment__price {
+    font-size: 30px;
+    font-weight: 600;
+    /* margin-bottom: 51px; */
+}
+.apartment__btn {
+    color: #151515;
+    font-size: 20px;
+    font-weight: 500;
+    background-color: #FED100;
+    padding: 12px 79px;
+    transition: 0.3s ease-in-out;
+}
+.apartment__btn:hover {
+    box-shadow: 0px 4px 24px 0px #FED100;
+    color: #fff;
+}
+
+.price__all {
+    display: none;
+}
+
+
+
 @media (max-width: 1312px) {
     .container {
         max-width: 1000px;
+    }
+
+    .price__row {
+        margin-top: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 10px;
     }
 }
 
@@ -299,6 +384,9 @@ body {
 
     /* Process */
 
+    .process {
+        padding-bottom: 205px;
+    }
     .process__row {
         grid-template-columns: 1fr;
     }
@@ -308,6 +396,68 @@ body {
     }
     .process__block__title {
         font-size: 24px;
+    }
+
+
+
+    /* Price */
+
+    .price {
+        background-color: #F8FBFF;
+        padding-top: 60px;
+        padding-bottom: 115px;
+        margin: 0;
+    }
+    .price__row {
+        margin-top: 45px;
+        gap: 28px;
+    }
+
+    .price__apartment {
+        border: #EBEBEB 0px solid;
+        display: none;
+        padding: 0;
+        height: 485px;
+        width: 0;
+    }
+    .apartment-active {
+        display: block;
+        width: 272px;
+        /* padding: 84px 80px 80px; */
+        display: flex;
+        gap: 0;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+    }
+    .apartment__title {
+        font-size: 24px;
+    }
+    .apartment__van,
+    .apartment__movers,
+    .apartment__removal {
+        font-size: 18px;
+    }
+    .apartment__btn {
+        font-size: 28px;
+        padding: 23px 114px 18px;
+    }
+    .price__all {
+        display: block;
+        font-size: 25px;
+        font-weight: 500;
+        position: relative;
+        text-align: center;
+    }
+    .price__all::after {
+        content: "";
+        width: 148px;
+        height: 1px;
+        background-color: #333333;
+        top: 0;
+        display: block;
+        margin-top: 10px;
+        /* position: absolute; */
     }
 }
 @media (max-width: 560px) {
@@ -338,6 +488,18 @@ body {
     }
     .process__block__title {
         font-size: 20px;
+    }
+
+
+    /* Price */
+
+    .price {
+        padding-bottom: 31px;
+    }
+    
+    .apartment__btn {
+        font-size: 20px;
+        padding: 20px 90px 18px;
     }
 
 }
@@ -408,4 +570,38 @@ body {
         right: -4px;
         top: 0;
     }
+
+
+    /* Price */
+
+    .price {
+        padding-bottom: 31px;
+    }
+    .price__apartment {
+        height: 372px;
+    }
+    .apartment__title {
+        font-size: 18px;
+        font-weight: 500;
+    }
+    .apartment__van,
+    .apartment__movers,
+    .apartment__removal {
+        font-size: 16px;
+        /* font-weight: 400; */
+    }
+    .apartment__btn {
+        font-size: 20px;
+        padding: 17px 90px;
+    }
+    .price__all {
+        display: block;
+        font-size: 20px;
+        font-weight: 500;
+        position: relative;
+        text-align: center;
+    }
+
+    
+
 }
