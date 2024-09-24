@@ -242,22 +242,113 @@ body {
 }
 .apartment__btn {
     color: #151515;
-    font-size: 20px;
-    font-weight: 500;
-    background-color: #FED100;
-    padding: 12px 79px;
-    transition: 0.3s ease-in-out;
 }
-.apartment__btn:hover {
-    box-shadow: 0px 4px 24px 0px #FED100;
-    color: #fff;
-}
-
 .price__all {
     display: none;
 }
 
 
+
+
+.auto {
+    padding-bottom: 46px;
+}
+.auto__wrapper {
+    max-width: 1221px;
+}
+.auto__title {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 600;
+}
+.auto__subtitle {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 600;
+    margin-top: 16px;
+}
+.auto__buttons {    
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.auto__btn {
+    background-color: #fff;
+    border: 1px solid #EBEBEB;
+    padding: 13px 64px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.auto__btn-active {
+    border: 1px solid #FED100
+}
+.auto__park {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 46px;
+}
+.auto__park::after {
+    content: url(../img/svg/hide-list.svg);
+    transform: rotate(-90deg);
+    cursor: pointer;
+}
+.auto__park::before {
+    content: url(../img/svg/hide-list.svg);
+    transform: rotate(90deg);
+    cursor: pointer;
+}
+.park__info {
+}
+.park__title {
+    margin-bottom: 38px;
+    font-size: 24px;
+    font-weight: 600;
+}
+.park__info__items {
+    
+}
+.park__info__item {
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 28px;
+    /* list-style-image: url(../img/svg/checkIcon.svg); */
+    /* padding-left: 16px; */
+}
+.park__info__item::before {
+    content: url(../img/svg/checkIcon.svg);
+    margin-right: 16px;
+}
+.park__info__item:last-child{
+    margin-bottom: 34px;
+}
+/* .park__btn {
+}
+
+.park__car {
+} */
+
+
+
+
+
+/* Style */
+
+.btn__style {
+    background-color: #FED100;
+    transition: 0.3s ease-in-out;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 13px 79px;
+}
+
+.btn__style:hover {
+    box-shadow: 0px 4px 24px 0px #FED100;
+    color: #fff;
+}
 
 @media (max-width: 1312px) {
     .container {
@@ -294,6 +385,86 @@ body {
     .banner::before {
         display: none;
     }
+
+
+    /* Auto */
+
+    .auto__park {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        margin-top: 46px;
+    }
+
+    .auto__btn {
+        border: 0px solid #EBEBEB;
+        border-bottom: 1px solid #EBEBEB;
+        padding: 0;
+        font-size: 24px;
+    }
+    
+    .auto__btn-active {
+        border-bottom: 1px solid #FED100;
+    }
+
+
+    .auto__park::after,
+    .auto__park::before {
+        display: none;
+    }
+    .park__title {
+        text-align: center;
+        font-size: 12px;
+        font-weight: 400;
+        margin-bottom: 24px;
+    }
+    .park__info__items {
+        display: none;
+    }
+    .park__car {
+        max-height: 366px;
+        width: auto;
+    }
+
+    .slider {
+        text-align: center;
+        margin-bottom: 28px;
+    }
+
+    .slider input[type="radio"] {
+        appearance: none;
+        -webkit-appearance: none;
+        width: 20px;
+        height: 20px;
+        position: relative;
+        cursor: pointer;
+        background-color: transparent;
+    }
+    
+    .slider input[type="radio"]::before {
+        content: '';
+        display: block;
+        width: 10px;
+        height: 10px;
+        background-color: #333333; 
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    
+    .slider input[type="radio"]:checked {
+        border: 2px solid #FED100; 
+        border-radius: 50%;
+    }
+    
+    .slider input[type="radio"]:checked::before {
+        background-color: #333333; 
+    }
+       
+
 }
 
 @media (max-width: 767px) {
@@ -438,7 +609,7 @@ body {
     .apartment__removal {
         font-size: 18px;
     }
-    .apartment__btn {
+    .btn__style {
         font-size: 28px;
         padding: 23px 114px 18px;
     }
@@ -458,6 +629,13 @@ body {
         display: block;
         margin-top: 10px;
         /* position: absolute; */
+    }
+
+
+    /* auto */
+
+    .auto__title {
+        margin-top: 84px;
     }
 }
 @media (max-width: 560px) {
@@ -497,11 +675,30 @@ body {
         padding-bottom: 31px;
     }
     
-    .apartment__btn {
+    .btn__style {
         font-size: 20px;
         padding: 20px 90px 18px;
     }
 
+
+    /* Auto */
+
+    .auto__title {
+        font-size: 20px;
+    }
+    .auto__subtitle {
+        font-size: 16px;
+    }
+    .auto__btn {
+        font-size: 14px;
+    }
+    .park__title {
+        font-size: 12px;
+    }
+    .park__car {
+        max-height: 213px;
+        width: auto;
+    }
 }
 
 @media (max-width: 319px) {
@@ -590,7 +787,7 @@ body {
         font-size: 16px;
         /* font-weight: 400; */
     }
-    .apartment__btn {
+    .btn__style {
         font-size: 20px;
         padding: 17px 90px;
     }
@@ -603,5 +800,10 @@ body {
     }
 
     
+    /* auto */
 
+    .park__car {
+        max-height: 190px;
+        width: auto;
+    }
 }
