@@ -294,6 +294,138 @@
                 </div>
             </div>
         </section>
+
+
+        <section class="feedback">
+            <div class="container">
+                <div class="feedback__wrapper">
+                    <div class="feedback__title">Закажи  переезд прямо сейчас со скидкой %</div>
+                    <div class="feedback__subtitle">Мы перезвоним в течении 10 секунд</div>
+
+                    <form action="#" method="get" enctype="multipart/form-data">
+                        
+                        <div class="feedback__userData">
+                            <input placeholder="Ваше имя" type="text" name="username">
+                            <input placeholder="Телефон" type="tel" name="userphone">
+                        </div>
+                        
+                        <div class="feedback__place">
+                            <div class="feedback__userRegion">
+                                <span>Укажите область</span>
+                                <select name="listRegion" id="">
+                                    <option disabled selected hidden value="">Например: Минская</option>
+                                    <option value="minsk">Минская</option>
+                                    <option value="brest">Брестская</option>
+                                    <option value="grodno">Гродненская</option>
+                                    <option value="mogilev">Могилевская</option>
+                                    <option value="gomel">Гомельская</option>
+                                    <option value="vetebsk">Витебская</option>
+                                </select>
+
+                            </div>
+
+                            <div class="feedback__userCity">
+
+                                <span>Укажите город</span>
+                                <select name="listRegion" id="">
+                                    <option disabled selected hidden value="">Например: Минск</option>
+                                    <option value="minsk">Минск</option>
+                                    <option value="brest">Брест</option>
+                                    <option value="grodno">Гродно</option>
+                                    <option value="mogilev">Могилев</option>
+                                    <option value="gomel">Гомель</option>
+                                    <option value="vetebsk">Витебск</option>
+                                </select>
+                                
+                            </div>
+                        </div>
+
+
+                        <div class="feedback__payment">
+                            <h1>Способ оплаты</h1>
+
+                            <div class="feedback__payRadio">
+                                <label for="radio1">
+                                    <input class="radio" type="radio" id="radio1" name="payment" value="">
+                                    <span class="fake"></span>
+                                    <span class="feedback__payRadio__text">Наличными курьеру</span>
+                                </label>
+                            
+                                <label for="radio2">
+                                    <input class="radio" type="radio" id="radio2" name="payment" value="" checked>
+                                    <span class="fake"></span>
+                                    <span class="feedback__payRadio__text">Картой курьеру</span>
+                                </label>
+                            
+                                <label for="radio3">
+                                    <input class="radio" type="radio" id="radio3" name="payment" value="">
+                                    <span class="fake"></span>
+                                    <span class="feedback__payRadio__text">Банковский перевод</span>
+                                </label>
+                            </div>
+                            
+                            
+                        </div>
+                        
+                        <div class="feedback__additonService">
+                            <h1>Дополнительные услуги</h1>
+
+                            <div class="additonService__block">
+                                <!-- <p><input checked type="checkbox" name="payment" value="">Вызов замерщика</p>
+                                <p><input type="checkbox" name="payment" value="">Упаковка для хрупких предметов</p>
+                                <p><input type="checkbox" name="payment" value="">Кран</p>
+                                <p><input checked type="checkbox" name="payment" value="">Сборка мебели</p>
+                                <p><input checked type="checkbox" name="payment" value="">Крупногабаритные предметы</p> -->
+                                <label>
+                                    <input class="checkbox" type="checkbox" name="payment" value="" checked>
+                                    <span class="fakeCheckbox"></span>
+                                    <span>Вызов замерщика</span>
+                                </label>
+
+                                <label>
+                                    <input class="checkbox" type="checkbox" name="payment" value="">
+                                    <span class="fakeCheckbox"></span>
+                                    <span>Упаковка для хрупких предметов</span>
+                                </label>
+
+                                <label>
+                                    <input class="checkbox" type="checkbox" name="payment" value="">
+                                    <span class="fakeCheckbox"></span>
+                                    <span>Кран</span>
+                                </label>
+
+                                <label>
+                                    <input class="checkbox" type="checkbox" name="payment" value="" checked>
+                                    <span class="fakeCheckbox"></span>
+                                    <span>Сборка мебели</span>
+                                </label>
+                                <label>
+                                    <input class="checkbox" type="checkbox" name="payment" value="" checked>
+                                    <span class="fakeCheckbox"></span>
+                                    <span>Крупногабаритные предметов</span>
+                                </label>
+                            </div>
+                            
+                            
+                        </div>
+
+                        <div class="feedback__order">
+                            <div class="feedback__time">
+                                05:37:25
+                            </div>
+
+                            <div class="feedback__orderBlock">
+                                <button class="orderBlock__btn">Заказать со скидкой</button>
+                                <div class="orderBlock__shadow"></div>
+                                <p><input checked type="checkbox" name="payment" value="">Даю согласие на обработку данных</p>
+                            </div>
+                        </div>
+
+                    </form>
+                    
+                </div>
+            </div>
+        </section>
     </main>
 
     <script src="js/script.js"></script>
