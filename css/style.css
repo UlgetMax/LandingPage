@@ -485,6 +485,26 @@ body {
     font-size: 20px;
     font-weight: 700;
 }
+.feedback__additonService-title {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.feedback__additonService-title img {
+    margin-left: 12px;
+    transition: 0.3s ease;
+}
+
+.feedback__additonService-title.active img {
+    transform: rotate(180deg);
+}
+
+.additonService__block.hidden {
+    display: none;
+}
+
+
 .feedback__payRadio {
     position: relative;
     display: flex;
