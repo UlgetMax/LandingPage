@@ -34,3 +34,23 @@ window.onload = function () {
     const display = document.getElementById('timer');
     startTimer(duration, display);
 };
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    const menu = document.querySelector('.header__menu');
+    const burger = document.querySelector('.header__burger');
+    
+    burger.addEventListener('click', function () {
+        menu.classList.toggle('menu--visible');
+    });
+});
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    const menu = document.querySelector('.header__menu');
+    const menuIcon = document.querySelector('.menu__list img');
+    
+    menuIcon.addEventListener('click', function () {
+        menu.classList.toggle('menu--visible');
+    });
+});

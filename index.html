@@ -10,7 +10,7 @@
 </head>
 <body>
     <div class="wrapper">
-        <header class="header">
+        <header class="header" id="header">
             <div class="container">
                 <div class="header__row">
                     <a href="#" class="header__logo">MOVING</a>
@@ -20,14 +20,21 @@
                     </div>
                     <nav class="header__menu">
                         <ul class="menu__list">
-                            <li><a href="#" class="menu__link">Цены</a></li>
-                            <li><a href="#" class="menu__link">Автопарк</a></li>
-                            <li><a href="#" class="menu__link">Отзывы</a></li>
-                            <li><a href="#" class="menu__link">Контакты</a></li>
+                            <div class="header__logo_menu">MOVING</div>
+                            <img src="img/svg/hide-list.svg" alt="icon" class="icon">
+                            <li id="active__menuList"><a href="#price" class="menu__link">Цены</a></li>
+                            <li><a href="#auto" class="menu__link">Автопарк</a></li>
+                            <li><a href="#reviews" class="menu__link">Отзывы</a></li>
+                            <li><a href="#contact" class="menu__link">Контакты</a></li>
                         </ul>
+
+                        <div class="header__menu__number">
+                            <a href="tel:+8 (029)-999-12-13">8 (029)-999-12-13</a>
+                        </div>
+
                     </nav>
                     <div class="header__number">
-                        8(029)-999-12-13
+                        <a href="tel:+8 (029)-999-12-13">8 (029)-999-12-13</a>
                     </div>
                 </div>
             </div>
@@ -122,7 +129,7 @@
             </div>
         </section>
 
-        <section class="price">
+        <section class="price" id="price">
             <div class="container">
                 <div class="price__wrapper">
                     <div class="price__title">Цены</div>
@@ -176,7 +183,7 @@
             </div>
         </section>
 
-        <section class="auto">
+        <section class="auto" id="auto">
             <div class="container">
                 <div class="auto__wrapper">
                     <div class="auto__title">Автопарк</div>
@@ -214,7 +221,7 @@
             </div>
         </section>
 
-        <section class="reviews">
+        <section class="reviews" id="reviews">
             <div class="container">
                 <div class="reviews__wrapper">
                     <div class="reviews__title">Отзывы</div>
@@ -370,7 +377,7 @@
                         <div class="feedback__additonService">
                             <div class="feedback__additonService-title">
                                 <h1>Дополнительные услуги</h1>
-                                <img src="../img/svg/hide-list.svg" alt="icon" class="icon">
+                                <img src="img/svg/hide-list.svg" alt="icon" class="icon">
                             </div>
                             
                             
@@ -416,7 +423,7 @@
 
                         <div class="feedback__order">
                             <div class="feedback__time" id="timer">
-                                00:1:25
+                                05:37:25
                             </div>
 
                             <div class="feedback__orderBlock">
@@ -444,7 +451,7 @@
         </section>
     </main>
 
-    <footer class="footer">
+    <footer class="footer" id="contact">
         <div class="container">
             <section class="footer__wrapper">
                 <div class="footer__politicsBlock">
@@ -454,11 +461,11 @@
                 </div>
                 <nav class="footer__links">
                     <ul class="menu__footerlist">
-                        <li><a href="#" class="footer__link">Главная</a></li>
-                        <li><a href="#" class="footer__link">Цены</a></li>
-                        <li><a href="#" class="footer__link">Автопарк</a></li>
-                        <li><a href="#" class="footer__link">Отзывы</a></li>
-                        <li><a href="#" class="footer__link">Контакты</a></li>
+                        <li><a href="#header" class="footer__link">Главная</a></li>
+                        <li><a href="#price" class="footer__link">Цены</a></li>
+                        <li><a href="#auto" class="footer__link">Автопарк</a></li>
+                        <li><a href="#reviews" class="footer__link">Отзывы</a></li>
+                        <li><a href="#contact" class="footer__link">Контакты</a></li>
                     </ul>
                 </nav>
 
